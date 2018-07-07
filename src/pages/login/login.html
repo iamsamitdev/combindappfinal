@@ -1,0 +1,32 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>เข้าสู่ระบบ</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <p text-right>
+    <button ion-button round outline small color="primary" (click)="gotoDashboard()">กลับหน้าหลัก</button>
+  </p>
+  <h1 text-center>เข้าสู่ระบบ</h1>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>ชื่อผู้ใช้</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>รหัสผ่าน</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <button ion-button block color="primary" (click)="login()">เข้าระบบ</button>
+  <p text-center>ยังไม่ได้เป็นสมาชิก ?</p>
+  <p text-center>
+    <button ion-button round outline small color="primary" (click)="register()">ไปสมัครสมาชิก</button>
+  </p>
+</ion-content>

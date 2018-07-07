@@ -16,6 +16,8 @@ import { SidePortfolioPage } from '../pages/side-portfolio/side-portfolio';
 import { SideSchedulePage } from '../pages/side-schedule/side-schedule';
 import { SideSettingPage } from '../pages/side-setting/side-setting';
 import { TabsPage } from '../pages/tabs/tabs';
+import { RegisterPage } from '../pages/register/register';
+import { LoginPage } from '../pages/login/login';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { TabsPage } from '../pages/tabs/tabs';
     SidePaymentPage,
     SidePortfolioPage,
     SideSchedulePage,
-    SideSettingPage
+    SideSettingPage,
+    RegisterPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -47,7 +51,9 @@ import { TabsPage } from '../pages/tabs/tabs';
     SidePaymentPage,
     SidePortfolioPage,
     SideSchedulePage,
-    SideSettingPage
+    SideSettingPage,
+    RegisterPage,
+    LoginPage
   ],
   providers: [
     StatusBar,
