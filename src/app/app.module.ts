@@ -1,9 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-
 import { MyApp } from './app.component';
-
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { TabHomePage } from '../pages/tab-home/tab-home';
@@ -21,6 +19,19 @@ import { LoginPage } from '../pages/login/login';
 import { WebapiServiceProvider } from '../providers/webapi-service/webapi-service';
 import { HttpModule } from '@angular/http';
 import { GlobalProvider } from '../providers/global/global';
+import { TabChatPage } from '../pages/tab-chat/tab-chat';
+
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
+var config = {
+  apiKey: "AIzaSyCCSBmF3ua6eWj-Cpg66Sa7E-qFtqTtwaI",
+  authDomain: "ionicchatapp-542d8.firebaseapp.com",
+  databaseURL: "https://ionicchatapp-542d8.firebaseio.com",
+  projectId: "ionicchatapp-542d8",
+  storageBucket: "ionicchatapp-542d8.appspot.com",
+  messagingSenderId: "198415197373"
+};
 
 @NgModule({
   declarations: [
@@ -36,12 +47,15 @@ import { GlobalProvider } from '../providers/global/global';
     SideSchedulePage,
     SideSettingPage,
     RegisterPage,
-    LoginPage
+    LoginPage,
+    TabChatPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpModule
+    HttpModule,
+    AngularFireModule.initializeApp(config),
+    AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -57,7 +71,8 @@ import { GlobalProvider } from '../providers/global/global';
     SideSchedulePage,
     SideSettingPage,
     RegisterPage,
-    LoginPage
+    LoginPage,
+    TabChatPage
   ],
   providers: [
     StatusBar,
