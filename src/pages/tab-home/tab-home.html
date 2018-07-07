@@ -9,18 +9,20 @@
     <ion-title>Home</ion-title>
 
     <ion-buttons right>
-        <button ion-button icon-only>
-            <ion-icon name="search"></ion-icon>
-        </button>
-        <button ion-button icon-only (click)="register()">
-            <ion-icon name="person-add"></ion-icon>
-        </button>
-        <button ion-button icon-only (click)="login()">
-            <ion-icon name="lock"></ion-icon>
-        </button>
-        <button ion-button icon-only color="white">
-            <ion-icon name="more"></ion-icon>
-          </button>
+      <button ion-button icon-only>
+        <ion-icon name="search"></ion-icon>
+      </button>
+        <span *ngIf="loginStatus==true">
+            <button ion-button icon-only (click)="register()">
+              <ion-icon name="person-add"></ion-icon>
+            </button>
+            <button ion-button icon-only (click)="login()">
+              <ion-icon name="lock"></ion-icon>
+            </button>
+        </span>
+      <button ion-button icon-only color="white">
+        <ion-icon name="more"></ion-icon>
+      </button>
     </ion-buttons>
 
   </ion-toolbar>
@@ -33,7 +35,8 @@
       <img src="assets/imgs/profile.jpg" alt="">
       <div class="box-c-right" style="color:#fff">
         <h2>Good Morning...</h2>
-        <p>Samit Koyom</p>
+        <p>{{userDetail.fullname}}</p>
+        <button ion-button color="light" round outline (click)="logout()" *ngIf="loginStatus==false">Logout</button>
       </div>
     </div>
   </div>

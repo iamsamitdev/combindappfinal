@@ -54,6 +54,10 @@ export class LoginPage {
           buttons:['Dismiss']
         });
         alert.present();
+
+        // บันทึกข้อมูลลง local storage
+        localStorage.setItem('userData',JSON.stringify(this.responseData));
+
         // ส่งกลับไปหน้าหลัก (dashboard)
         this.navCtrl.setRoot(TabsPage);
       }else{
