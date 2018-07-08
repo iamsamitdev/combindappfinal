@@ -21,6 +21,8 @@ import { HttpModule } from '@angular/http';
 import { GlobalProvider } from '../providers/global/global';
 import { TabChatPage } from '../pages/tab-chat/tab-chat';
 
+import { NativeAudio } from '@ionic-native/native-audio';
+
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
@@ -79,7 +81,8 @@ var config = {
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     WebapiServiceProvider,
-    GlobalProvider
+    GlobalProvider,
+    NativeAudio
   ]
 })
 export class AppModule {}

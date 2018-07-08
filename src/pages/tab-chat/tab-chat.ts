@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NativeAudio } from '@ionic-native/native-audio';
 import { AngularFireDatabase } from 'angularfire2/database';
 
 @IonicPage()
@@ -17,7 +18,10 @@ export class TabChatPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    public db: AngularFireDatabase, ) {
+    public db: AngularFireDatabase,
+    private nativeAudio: NativeAudio ) {
+
+    this.nativeAudio.preloadSimple('uniqueId1', 'assets/audio/get_outto.mp3').then(null);
 
     // อ่านค่าจาก Local Storage
     const data = JSON.parse(localStorage.getItem('userData'));
@@ -46,6 +50,8 @@ export class TabChatPage {
   }
 
   sendMessage() {
+
+    this.nativeAudio.play('uniqueId1').then(null);
 
     this.db.list('/chat').push({
       username: this.fullname,
