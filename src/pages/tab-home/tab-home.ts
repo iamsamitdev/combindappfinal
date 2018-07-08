@@ -13,11 +13,14 @@ export class TabHomePage {
 
   userDetail:any;
   loginStatus:boolean;
+  getTokenKey:any;
 
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams, 
     public app: App) {
+
+      this.getTokenKey = localStorage.getItem('token_key');
 
         // อ่านค่าจาก Local Storage
         const data = JSON.parse(localStorage.getItem('userData'));

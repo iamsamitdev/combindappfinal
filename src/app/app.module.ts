@@ -23,6 +23,7 @@ import { HttpModule } from '@angular/http';
 import { GlobalProvider } from '../providers/global/global';
 import { CoursedetailPage } from '../pages/coursedetail/coursedetail';
 import { TabChatPage } from '../pages/tab-chat/tab-chat';
+import { ShowpushdetailPage } from '../pages/showpushdetail/showpushdetail';
 
 /*** FIREBASE MODULE ***/
 import { AngularFireModule } from 'angularfire2';
@@ -38,6 +39,9 @@ var config = {
   storageBucket: "combindchatapp-samit.appspot.com",
   messagingSenderId: "625436089621"
 };
+
+/**** PUSH NOTIFICATION ***/
+import { FCM } from '@ionic-native/fcm'; 
 
 @NgModule({
   declarations: [
@@ -55,7 +59,8 @@ var config = {
     RegisterPage,
     LoginPage,
     CoursedetailPage,
-    TabChatPage
+    TabChatPage,
+    ShowpushdetailPage
   ],
   imports: [
     BrowserModule,
@@ -80,7 +85,8 @@ var config = {
     RegisterPage,
     LoginPage,
     CoursedetailPage,
-    TabChatPage
+    TabChatPage,
+    ShowpushdetailPage
   ],
   providers: [
     StatusBar,
@@ -88,7 +94,8 @@ var config = {
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     WebapiServiceProvider,
     GlobalProvider,
-    NativeAudio
+    NativeAudio,
+    FCM
   ]
 })
 export class AppModule {}

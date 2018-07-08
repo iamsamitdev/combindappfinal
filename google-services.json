@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "772937703267",
+    "firebase_url": "https://combindapppush-samit.firebaseio.com",
+    "project_id": "combindapppush-samit",
+    "storage_bucket": "combindapppush-samit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:772937703267:android:99c834edb2c36f12",
+        "android_client_info": {
+          "package_name": "com.itgenius.combindapptoday"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "772937703267-gb3m2o73qhdt6ct8ovg5npt0gk6362u7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEVdng9z5-BiETFPIOwEJJC1xsLNlucxg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
