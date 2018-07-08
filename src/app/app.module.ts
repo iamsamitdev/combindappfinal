@@ -22,6 +22,20 @@ import { WebapiServiceProvider } from '../providers/webapi-service/webapi-servic
 import { HttpModule } from '@angular/http';
 import { GlobalProvider } from '../providers/global/global';
 import { CoursedetailPage } from '../pages/coursedetail/coursedetail';
+import { TabChatPage } from '../pages/tab-chat/tab-chat';
+
+/*** FIREBASE MODULE ***/
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
+var config = {
+  apiKey: "AIzaSyAgaTj-Bag_VBKtAyi6upgByunP4nt1Cbk",
+  authDomain: "combindchatapp-samit.firebaseapp.com",
+  databaseURL: "https://combindchatapp-samit.firebaseio.com",
+  projectId: "combindchatapp-samit",
+  storageBucket: "combindchatapp-samit.appspot.com",
+  messagingSenderId: "625436089621"
+};
 
 @NgModule({
   declarations: [
@@ -38,12 +52,15 @@ import { CoursedetailPage } from '../pages/coursedetail/coursedetail';
     SideSettingPage,
     RegisterPage,
     LoginPage,
-    CoursedetailPage
+    CoursedetailPage,
+    TabChatPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpModule
+    HttpModule,
+    AngularFireModule.initializeApp(config),
+    AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -60,7 +77,8 @@ import { CoursedetailPage } from '../pages/coursedetail/coursedetail';
     SideSettingPage,
     RegisterPage,
     LoginPage,
-    CoursedetailPage
+    CoursedetailPage,
+    TabChatPage
   ],
   providers: [
     StatusBar,
