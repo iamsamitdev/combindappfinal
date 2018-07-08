@@ -28,6 +28,8 @@ import { TabChatPage } from '../pages/tab-chat/tab-chat';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
+import { NativeAudio } from '@ionic-native/native-audio';
+
 var config = {
   apiKey: "AIzaSyAgaTj-Bag_VBKtAyi6upgByunP4nt1Cbk",
   authDomain: "combindchatapp-samit.firebaseapp.com",
@@ -85,7 +87,8 @@ var config = {
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     WebapiServiceProvider,
-    GlobalProvider
+    GlobalProvider,
+    NativeAudio
   ]
 })
 export class AppModule {}
